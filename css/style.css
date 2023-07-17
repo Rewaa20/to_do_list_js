@@ -1,0 +1,206 @@
+*{
+    margin:0px;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #d8e2dc;
+    min-height: 100vh;
+    color:white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+button{
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header , form{
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+h1{
+    color:#354f52;
+    letter-spacing: 1.2px;
+    text-transform: capitalize;
+    font-size: 3.5rem;
+}
+form{
+    width:50%;
+
+}
+form input , form button {
+    border: none;
+    font-size: 1.5rem;
+    padding:1rem 0.5rem;
+    background-color: white;
+}
+form input{
+    transition: all 0.5s;
+    width:60%;
+}
+form input:focus{
+    outline: none;
+    box-shadow: 5px 0 10px #96a8a4;
+}
+form .todo-btn{
+    color:#354f52;
+    background-color: #fcbf49;
+    width:10%;
+    transition: all 0.5s;
+}
+form input:focus .todo-btn{
+    box-shadow: 5px 0 10px #96a8a4;
+
+}
+form .todo-btn:hover{
+    color:white;
+    font-weight: 500;
+    cursor: pointer;
+}
+.select{
+    position: relative;
+   margin-left: 1rem;
+   width:30%;
+   background-color: aqua;
+   /* background-color: white; */
+   /* padding: 1rem; */
+}
+form select{
+    width: 100%;
+   color:#354f52;
+   /* background-color: #e63946; */
+   appearance: none;
+   border: none;
+    outline: none;
+    padding: 1.1rem;
+    transition: all 0.5s;
+}
+select:hover{
+    cursor: pointer;
+}
+.select::after{
+    content: '\25bc';
+    color:#354f52;
+    background-color: #fcbf49;
+    position: absolute;
+    top:0;
+    right:0;
+    padding: 1rem;
+    pointer-events:none;
+}
+.select:hover::after{
+    color: white;
+}
+
+.todo-container{
+    display: flex;
+    justify-content: center;
+    width:60%;
+}
+
+.todo-list{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width:100%;
+    /* height:1rem; */
+    /* background-color: white; */
+    /* padding: 2rem 0; */
+    list-style-type: none;
+    color:#354f52;
+}
+li{
+    font-size: 1.2rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    padding-left: 1rem;
+    transition: all 0.5s;
+}
+.todo{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height:2.7rem;
+    background-color: white;
+    transition: all 0.6s;
+    margin: 0.3rem 0;
+}
+.btns{
+    display: flex;
+    width:15%;
+    /* justify-content: space-between; */
+    align-items: center;
+}
+.btns button{
+    color:white;
+    padding: 0.2rem 0.5rem;
+    width:50%;
+    height: 100%;
+    border:none;
+}
+.btns .del{
+    background-color: #e63946;
+}
+.btns .check{
+    background-color: #354f52;
+}
+.btns i{
+   pointer-events: none;
+}
+.removed{
+    transform:translateY(2rem);
+    opacity: 0;
+}
+.checked li{
+    text-decoration: line-through;
+    opacity: 0.5;
+    transform: scale(0.9);
+}
+.new{
+    transform:translateX(100px);
+}
+@media(max-width:500px){
+    form{
+        width:90%;
+    }
+    .todo-container{
+        display: flex;
+        justify-content: center;
+        width:80%;
+    }
+    .btns{
+        width:20%;
+    }
+
+    .select::after{
+        content: '\25bc';
+        color:#354f52;
+        background-color: #fcbf49;
+        position: absolute;
+        top:0;
+        right:0;
+        padding: 1rem 0.1rem;
+        pointer-events:none;
+    }
+   
+}
+@media(max-width:900px){
+    form{
+        width:60%;
+    }
+    .todo-container{
+        display: flex;
+        justify-content: center;
+        width:70%;
+    }
+    .btns{
+        width:20%;
+    }
+}

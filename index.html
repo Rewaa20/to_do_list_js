@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <title>to do list</title>
+</head>
+<body>
+    <header>
+        <h1>to do list</h1>
+    </header>
+    <form>
+        <input class="todo-input" type="text">
+        <button class="todo-btn"><i class="fa-solid fa-plus"></i></button>
+        <div class="select">
+            <select name="catagory" id="">
+                <option value="all">all</option>
+                <option value="completed">completed</option>
+                <option value="uncompleted">not completed</option>
+            </select>
+        </div>
+
+    </form>
+    <div class="todo-container">
+        <ul class="todo-list">
+          <!-- <div class="todo">
+            <li></li>
+            <button class="delete"></button>
+            <button class="check"></button>
+          </div> -->
+        </ul>
+    </div>
+    <script src="js/app.js"></script>
+</body>
+</html>
